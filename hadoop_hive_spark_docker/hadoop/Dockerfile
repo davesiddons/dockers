@@ -37,10 +37,10 @@ RUN cat /home/hadoop/.ssh/id_rsa.pub >> /home/hadoop/.ssh/authorized_keys
 RUN chown hadoop -R /home/hadoop/.ssh
 
 # get sources
-RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-3.2.0/hadoop-3.2.0.tar.gz -P /home/hadoop/
-RUN tar -xzf /home/hadoop/hadoop-3.2.0.tar.gz -C /home/hadoop/
-RUN mv /home/hadoop/hadoop-3.2.0 /home/hadoop/hadoop
-RUN rm -rf /home/hadoop/hadoop-3.2.0*
+RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-3.3.6/hadoop-3.3.6.tar.gz -P /home/hadoop/
+RUN tar -xzf /home/hadoop/hadoop-3.3.6.tar.gz -C /home/hadoop/
+RUN mv /home/hadoop/hadoop-3.3.6 /home/hadoop/hadoop
+RUN rm -rf /home/hadoop/hadoop-3.3.6*
 
 # set environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
